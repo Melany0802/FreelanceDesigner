@@ -33,7 +33,7 @@ body {
     max-width: 120rem;
     /*Toma como máximo 1200px, sino se puede, toma el 100% que es el ancho por defecto*/
     margin: 0 auto;
-    text-align: center;
+    
 }
 
 .boton {
@@ -176,4 +176,40 @@ h3 {
 .contenido-hero h2,
 .contenido-hero p {
     color: var(--blanco);
+}
+
+
+/* Servicios */
+@media(min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+.servicio{ /*Para poder tener centrado los circulos*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p{
+    line-height: 2; /*interlineado*/
+    text-align: center;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%; /*Si tenemos un cuadrado y le ponemos este border-radius se forma un circulo perfecto*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
